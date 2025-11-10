@@ -15,13 +15,13 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Thiết Kế Website Chuyên Nghiệp - Chuẩn SEO, Tốc Độ Cao | Landing Profile',
-  description: 'Dịch vụ thiết kế website chuyên nghiệp theo yêu cầu, tối ưu SEO, tốc độ cao, bảo mật chặt chẽ. Thiết kế web bán hàng, doanh nghiệp, landing page, blog. Đặt lịch tư vấn ngay!',
-  keywords: 'thiết kế website, thiết kế website chuyên nghiệp, thiết kế website chuẩn SEO, landing page, website bán hàng, website doanh nghiệp',
-  authors: [{ name: 'Landing Profile' }],
+  title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
+  description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số. Nhanh chóng, an toàn, hiệu quả cho doanh nghiệp.',
+  keywords: 'kenix solutions, thiết kế website, phát triển ứng dụng, chuyển đổi số, công nghệ, giải pháp doanh nghiệp',
+  authors: [{ name: 'Kenix Solutions' }],
   openGraph: {
-    title: 'Thiết Kế Website Chuyên Nghiệp | Landing Profile',
-    description: 'Dịch vụ thiết kế website chuyên nghiệp theo yêu cầu, tối ưu SEO, tốc độ cao, bảo mật chặt chẽ.',
+    title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
+    description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số.',
     type: 'website',
     locale: 'vi_VN',
   },

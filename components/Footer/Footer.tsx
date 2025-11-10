@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './Footer.module.css'
 
 export default function Footer() {
@@ -8,11 +9,15 @@ export default function Footer() {
         <div className={styles.grid}>
           <div className={styles.column}>
             <div className={styles.logo}>
-              <span className={styles.logoAccent}>LP</span>
-              <span>Landing Profile</span>
+              <Image 
+                src="/Kenix.png" 
+                alt="Kenix Solutions" 
+                width={1620}
+                height={405}
+              />
             </div>
             <p className={styles.tagline}>
-              Thiết kế & lập trình website chuyên nghiệp – Nhanh, chuẩn SEO, tối ưu chuyển đổi!
+              Giải pháp công nghệ chuyên nghiệp – Nhanh, an toàn, hiệu quả cho doanh nghiệp!
             </p>
             <div className={styles.contactInfo}>
               <div className={styles.contactItem}>
@@ -26,7 +31,7 @@ export default function Footer() {
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
-                <a href="mailto:nguyenvantanphat.it@gmail.com">nguyenvantanphat.it@gmail.com</a>
+                <a href="mailto:contact@kenixsolutions.com">contact@kenixsolutions.com</a>
               </div>
               <div className={styles.contactItem}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -108,19 +113,19 @@ export default function Footer() {
               <form className={styles.newsletterForm}>
                 <input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="Nhập email của bạn"
                   className={styles.newsletterInput}
                   aria-label="Email address"
                 />
                 <button type="submit" className={styles.newsletterButton}>
-                  Subscribe
+                  Đăng ký
                 </button>
               </form>
             </div>
           </div>
         </div>
         <div className={styles.copyright}>
-          <p>© 2025 Landing Profile. Tất cả quyền được bảo lưu.</p>
+          <p>© 2025 Kenix Solutions. Tất cả quyền được bảo lưu.</p>
         </div>
       </div>
     </footer>

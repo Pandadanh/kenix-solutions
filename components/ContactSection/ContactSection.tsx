@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import Image from 'next/image'
 import styles from './ContactSection.module.css'
 
 export default function ContactSection() {
@@ -80,8 +81,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h3 className={styles.contactLabel}>Email</h3>
-                  <a href="mailto:nguyenvantanphat.it@gmail.com" className={styles.contactValue}>
-                    nguyenvantanphat.it@gmail.com
+                  <a href="mailto:contact@kenixsolutions.com" className={styles.contactValue}>
+                    contact@kenixsolutions.com
                   </a>
                 </div>
               </div>
@@ -99,8 +100,12 @@ export default function ContactSection() {
               </div>
             </div>
             <div className={styles.logo}>
-              <span className={styles.logoAccent}>LP</span>
-              <span>Landing Profile</span>
+              <Image 
+                src="/Kenix.png" 
+                alt="Kenix Solutions" 
+                width={1620}
+                height={405}
+              />
             </div>
           </div>
           <form className={styles.form} onSubmit={handleSubmit}>

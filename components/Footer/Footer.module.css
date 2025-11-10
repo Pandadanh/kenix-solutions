@@ -27,15 +27,15 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
-  font-size: var(--font-size-xl);
-  color: var(--color-bg-primary);
+  margin-bottom: var(--spacing-md);
 }
 
-.logoAccent {
-  color: var(--color-accent);
-  font-size: var(--font-size-2xl);
+.logo img {
+  height: auto;
+  width: auto;
+  max-height: 80px;
+  filter: brightness(0) invert(1);
+  object-fit: contain;
 }
 
 .tagline {

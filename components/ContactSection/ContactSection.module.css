@@ -91,16 +91,14 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
-  font-size: var(--font-size-xl);
-  color: var(--color-text-primary);
   margin-top: var(--spacing-md);
 }
 
-.logoAccent {
-  color: var(--color-accent);
-  font-size: var(--font-size-2xl);
+.logo img {
+  height: auto;
+  width: auto;
+  max-height: 80px;
+  object-fit: contain;
 }
 
 .form {

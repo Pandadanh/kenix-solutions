@@ -20,25 +20,25 @@ export default function Header() {
   }, [])
 
   const menuItems = [
-    { label: 'Về chúng tôi', href: '/vi#about' },
-    { label: 'Dịch vụ', href: '/vi#services' },
-    { label: 'Dự án', href: '/vi#projects' },
-    { label: 'Giải pháp', href: '/vi/solutions' },
-    { label: 'Tài nguyên', href: '/vi/resources' },
-    { label: 'Tin tức & Blog', href: '/vi/blog' },
-    { label: 'Báo giá', href: '/vi/cong-cu-tinh-gia-website' },
-    { label: 'Tuyển dụng', href: '/vi/careers' },
-    { label: 'Liên hệ', href: '/vi/contact' },
+    { label: 'Sản phẩm', href: '/vi#services' },
+    { label: 'Hồ sơ', href: '/vi#about' },
+    { label: 'Đội ngũ', href: '/vi#projects' },
+    { label: 'Chuyên môn', href: '/vi/solutions' },
+    { label: 'Bài viết', href: '/vi/blog' },
   ]
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         <Link href="/vi" className={styles.logo}>
-          <div className={styles.logoText}>
-            <span className={styles.logoAccent}>LP</span>
-            <span>Landing Profile</span>
-          </div>
+          <Image 
+            src="/Kenix.png" 
+            alt="Kenix Solutions" 
+            width={1800}
+            height={450}
+            priority
+            className={styles.logoImage}
+          />
         </Link>
 
         <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
@@ -68,8 +68,8 @@ export default function Header() {
               <path d="m21 21-4.35-4.35" />
             </svg>
           </button>
-          <Link href="/api/auth/signin" className={styles.signInBtn}>
-            Sign In
+          <Link href="/vi/contact" className={styles.signInBtn}>
+            Liên hệ ngay
           </Link>
           <button
             className={styles.menuToggle}
