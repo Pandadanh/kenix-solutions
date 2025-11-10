@@ -447,13 +447,19 @@
   }
   
   .scrollMouse {
-    width: 26px;
-    height: 40px;
+    width: 24px;
+    height: 36px;
+  }
+  
+  .scrollWheel {
+    width: 3.5px;
+    height: 7px;
   }
   
   .scrollText {
-    font-size: 0.75rem;
-    padding: 6px 16px;
+    font-size: 0.625rem;
+    padding: 5px 12px;
+    opacity: 0.75;
   }
 }
 
@@ -501,13 +507,19 @@
   }
   
   .scrollMouse {
-    width: 26px;
-    height: 40px;
+    width: 22px;
+    height: 34px;
+  }
+  
+  .scrollWheel {
+    width: 3px;
+    height: 6px;
   }
   
   .scrollText {
-    font-size: 0.75rem;
-    padding: 6px 16px;
+    font-size: 0.5625rem;
+    padding: 4px 10px;
+    opacity: 0.7;
   }
 }
 
@@ -560,19 +572,20 @@
   }
   
   .scrollMouse {
-    width: 26px;
-    height: 40px;
+    width: 20px;
+    height: 32px;
   }
   
   .scrollWheel {
-    width: 4px;
-    height: 8px;
-    top: 8px;
+    width: 3px;
+    height: 6px;
+    top: 7px;
   }
   
   .scrollText {
-    font-size: 0.75rem;
-    padding: 6px 16px;
+    font-size: 0.5rem;
+    padding: 3px 9px;
+    opacity: 0.65;
   }
 }
 
@@ -626,19 +639,20 @@
   }
   
   .scrollMouse {
-    width: 26px;
-    height: 40px;
+    width: 18px;
+    height: 30px;
   }
   
   .scrollWheel {
-    width: 4px;
-    height: 8px;
-    top: 8px;
+    width: 2.5px;
+    height: 5px;
+    top: 6px;
   }
   
   .scrollText {
-    font-size: 0.75rem;
-    padding: 6px 16px;
+    font-size: 0.5rem;
+    padding: 3px 8px;
+    opacity: 0.6;
   }
 }
 
