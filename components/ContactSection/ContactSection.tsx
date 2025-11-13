@@ -67,8 +67,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h3 className={styles.contactLabel}>Điện thoại</h3>
-                  <a href="tel:+84374225294" className={styles.contactValue}>
-                    +84 374 225 294
+                  <a href="tel:+84586997953" className={styles.contactValue}>
+                    +84 586 997 953
                   </a>
                 </div>
               </div>
@@ -81,8 +81,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h3 className={styles.contactLabel}>Email</h3>
-                  <a href="mailto:contact@kenixsolutions.com" className={styles.contactValue}>
-                    contact@kenixsolutions.com
+                  <a href="mailto:kenis.solutions@gmail.com" className={styles.contactValue}>
+                    kenis.solutions@gmail.com
                   </a>
                 </div>
               </div>
@@ -95,18 +95,11 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h3 className={styles.contactLabel}>Địa chỉ</h3>
-                  <p className={styles.contactValue}>Bình Thạnh, TP. Hồ Chí Minh</p>
+                  <p className={styles.contactValue}>Tân Bình, TP. Hồ Chí Minh</p>
                 </div>
               </div>
             </div>
-            <div className={styles.logo}>
-              <Image 
-                src="/Kenix.png" 
-                alt="Kenix Solutions" 
-                width={1620}
-                height={405}
-              />
-            </div>
+           
           </div>
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.formRow}>
@@ -156,26 +149,7 @@ export default function ContactSection() {
                 aria-required="true"
               />
             </div>
-            <div className={styles.formGroup}>
-              <label htmlFor="service" className={styles.label}>
-                Dịch vụ quan tâm
-              </label>
-              <select
-                id="service"
-                name="service"
-                value={formData.service}
-                onChange={handleChange}
-                required
-                className={styles.select}
-                aria-required="true"
-              >
-                <option value="">Chọn dịch vụ</option>
-                <option value="startup">Gói Khởi Nghiệp</option>
-                <option value="professional">Gói Doanh Nghiệp</option>
-                <option value="ecommerce">Gói Thương Mại Điện Tử</option>
-                <option value="custom">Gói Giải Pháp Tùy Chỉnh</option>
-              </select>
-            </div>
+           
             <div className={styles.formGroup}>
               <label htmlFor="message" className={styles.label}>
                 Nội dung

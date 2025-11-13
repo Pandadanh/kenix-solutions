@@ -13,7 +13,7 @@ const packages = [
       'Bảo trì miễn phí 3 tháng',
       'Miễn phí domain 1 năm',
     ],
-    popular: false,
+    popular: true,
   },
   {
     name: 'Chuyên Nghiệp',
@@ -41,22 +41,9 @@ const packages = [
       'Bảo trì miễn phí 12 tháng',
       'Miễn phí domain 1 năm',
     ],
-    popular: true,
-  },
-  {
-    name: 'Giải Pháp Tùy Chỉnh',
-    description: 'Phát triển ứng dụng web/mobile theo yêu cầu đặc biệt.',
-    features: [
-      'Thiết kế & lập trình theo yêu cầu đặc thù',
-      'Ứng dụng Web App, Mobile App (iOS & Android)',
-      'Hệ thống web app (CRM, ERP, SaaS...)',
-      'Tích hợp API, hệ thống tự động hóa, quản lý nội bộ',
-      'Hỗ trợ AI & Machine Learning nếu cần',
-      'Hỗ trợ & bảo trì theo hợp đồng riêng',
-      'Miễn phí domain 1 năm',
-    ],
     popular: false,
   },
+ 
 ]
 
 export default function ServicesPackages() {
@@ -89,7 +76,7 @@ export default function ServicesPackages() {
                 ))}
               </ul>
               <button className={styles.ctaButton}>
-                Đặt lịch demo
+                Chi tiết
               </button>
             </div>
           ))}

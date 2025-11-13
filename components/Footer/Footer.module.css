@@ -27,15 +27,15 @@
 .logo {
   display: flex;
   align-items: center;
-  margin-bottom: var(--spacing-md);
 }
 
 .logo img {
   height: auto;
   width: auto;
-  max-height: 80px;
+  max-height: 160px;
   filter: brightness(0) invert(1);
   object-fit: contain;
+  margin: 0 auto;
 }
 
 .tagline {
