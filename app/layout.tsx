@@ -15,19 +15,59 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
+  metadataBase: new URL('https://landingprofile.com'),
+  title: {
+    default: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
+    template: '%s | Kenix Solutions',
+  },
   description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số. Nhanh chóng, an toàn, hiệu quả cho doanh nghiệp.',
-  keywords: 'kenix solutions, thiết kế website, phát triển ứng dụng, chuyển đổi số, công nghệ, giải pháp doanh nghiệp',
+  keywords: ['kenix solutions', 'thiết kế website', 'phát triển ứng dụng', 'chuyển đổi số', 'công nghệ', 'giải pháp doanh nghiệp', 'landing page', 'web design', 'mobile app development'],
   authors: [{ name: 'Kenix Solutions' }],
+  creator: 'Kenix Solutions',
+  publisher: 'Kenix Solutions',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
-    title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
-    description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số.',
     type: 'website',
     locale: 'vi_VN',
+    url: 'https://landingprofile.com',
+    siteName: 'Kenix Solutions',
+    title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
+    description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số.',
+    images: [
+      {
+        url: '/Kenix.png',
+        width: 1200,
+        height: 630,
+        alt: 'Kenix Solutions',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
+    description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số.',
+    images: ['/Kenix.png'],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'googlea4ace78080f0fa0f',
+  },
+  alternates: {
+    canonical: 'https://landingprofile.com',
   },
 }
 
