@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số. Nhanh chóng, an toàn, hiệu quả cho doanh nghiệp.',
   keywords: 'kenix solutions, thiết kế website, phát triển ứng dụng, chuyển đổi số, công nghệ, giải pháp doanh nghiệp',
   alternates: {
-    canonical: 'https://landingprofile.com',
+    canonical: 'https://kenix-solutions.com',
   },
   openGraph: {
     title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
     description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số.',
-    url: 'https://landingprofile.com',
+    url: 'https://kenix-solutions.com',
     siteName: 'Kenix Solutions',
     type: 'website',
     locale: 'vi_VN',

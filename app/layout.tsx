@@ -15,7 +15,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://landingprofile.com'),
+  metadataBase: new URL('https://kenix-solutions.com'),
   title: {
     default: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
     template: '%s | Kenix Solutions',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'vi_VN',
-    url: 'https://landingprofile.com',
+    url: 'https://kenix-solutions.com',
     siteName: 'Kenix Solutions',
     title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
     description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số.',
@@ -67,7 +67,17 @@ export const metadata: Metadata = {
     google: 'googlea4ace78080f0fa0f',
   },
   alternates: {
-    canonical: 'https://landingprofile.com',
+    canonical: 'https://kenix-solutions.com',
+  },
+  icons: {
+    icon: [
+      { url: '/icon.png', sizes: 'any' },
+      { url: '/Kenix.png', sizes: 'any', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/Kenix.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/Kenix.png',
   },
 }
 
@@ -79,6 +89,9 @@ export default function RootLayout({
   return (
     <html lang="vi" className={inter.variable}>
       <head>
+        <link rel="icon" href="/icon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/Kenix.png" />
+        <link rel="shortcut icon" href="/icon.png" type="image/png" />
         <SEOHead />
         {/* Google Analytics */}
         <script

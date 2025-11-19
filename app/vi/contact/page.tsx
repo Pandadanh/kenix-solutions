@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   keywords: 'liên hệ kenix solutions, tư vấn thiết kế website, tư vấn phát triển ứng dụng, liên hệ chuyển đổi số, hỗ trợ khách hàng',
   authors: [{ name: 'Kenix Solutions' }],
   alternates: {
-    canonical: 'https://landingprofile.com/vi/contact',
+    canonical: 'https://kenix-solutions.com/vi/contact',
   },
   openGraph: {
     title: 'Liên Hệ - Kenix Solutions | Tư Vấn Miễn Phí',
     description: 'Liên hệ với Kenix Solutions để nhận tư vấn miễn phí về dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số chuyên nghiệp.',
-    url: 'https://landingprofile.com/vi/contact',
+    url: 'https://kenix-solutions.com/vi/contact',
     siteName: 'Kenix Solutions',
     type: 'website',
     locale: 'vi_VN',

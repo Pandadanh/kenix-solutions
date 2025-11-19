@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://landingprofile.com'
+  const baseUrl = 'https://kenix-solutions.com'
   
   return [
     {

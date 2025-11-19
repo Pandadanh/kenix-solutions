@@ -12,18 +12,18 @@ export const metadata: Metadata = {
   keywords: 'kenix solutions, thiết kế website, phát triển ứng dụng, chuyển đổi số, công nghệ, giải pháp doanh nghiệp, landing page, web design, mobile app development',
   authors: [{ name: 'Kenix Solutions' }],
   alternates: {
-    canonical: 'https://landingprofile.com/vi',
+    canonical: 'https://kenix-solutions.com/vi',
   },
   openGraph: {
     title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
     description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số.',
-    url: 'https://landingprofile.com/vi',
+    url: 'https://kenix-solutions.com/vi',
     siteName: 'Kenix Solutions',
     type: 'website',
     locale: 'vi_VN',
     images: [
       {
-        url: 'https://landingprofile.com/Kenix.png',
+        url: 'https://kenix-solutions.com/Kenix.png',
         width: 1200,
         height: 630,
         alt: 'Kenix Solutions',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
     description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số.',
-    images: ['https://landingprofile.com/Kenix.png'],
+    images: ['https://kenix-solutions.com/Kenix.png'],
   },
   robots: {
     index: true,

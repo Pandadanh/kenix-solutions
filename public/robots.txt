@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://landingprofile.com/sitemap.xml
+Sitemap: https://kenix-solutions.com/sitemap.xml
 

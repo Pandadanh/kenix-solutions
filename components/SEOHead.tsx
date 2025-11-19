@@ -1,5 +1,5 @@
 export default function SEOHead() {
-  const baseUrl = 'https://landingprofile.com'
+  const baseUrl = 'https://kenix-solutions.com'
 
   const structuredData = {
     "@context": "https://schema.org",
