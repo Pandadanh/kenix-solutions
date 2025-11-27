@@ -7,16 +7,16 @@ import Testimonials from '@/components/Testimonials'
 import ContactSection from '@/components/ContactSection'
 
 export const metadata: Metadata = {
-  title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
-  description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số. Nhanh chóng, an toàn, hiệu quả cho doanh nghiệp.',
-  keywords: 'kenix solutions, thiết kế website, phát triển ứng dụng, chuyển đổi số, công nghệ, giải pháp doanh nghiệp, landing page, web design, mobile app development',
+  title: 'Kenix Solutions - Phần Mềm AI Giải Quyết Vấn Đề Doanh Nghiệp',
+  description: 'Kenix Solutions phát triển phần mềm AI chuyên nghiệp, giải quyết các vấn đề doanh nghiệp bằng trí tuệ nhân tạo. Tự động hóa quy trình, tối ưu hiệu suất và tăng trưởng kinh doanh với giải pháp AI tùy chỉnh.',
+  keywords: 'kenix solutions, phần mềm AI, giải pháp AI doanh nghiệp, trí tuệ nhân tạo, AI software, tự động hóa doanh nghiệp, machine learning, phần mềm tùy chỉnh, giải quyết vấn đề doanh nghiệp, AI automation, business intelligence',
   authors: [{ name: 'Kenix Solutions' }],
   alternates: {
     canonical: 'https://kenix-solutions.com/vi',
   },
   openGraph: {
-    title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
-    description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số.',
+    title: 'Kenix Solutions - Phần Mềm AI Giải Quyết Vấn Đề Doanh Nghiệp',
+    description: 'Phát triển phần mềm AI chuyên nghiệp, giải quyết các vấn đề doanh nghiệp bằng trí tuệ nhân tạo. Tự động hóa quy trình và tối ưu hiệu suất.',
     url: 'https://kenix-solutions.com/vi',
     siteName: 'Kenix Solutions',
     type: 'website',
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
         url: 'https://kenix-solutions.com/Kenix.png',
         width: 1200,
         height: 630,
-        alt: 'Kenix Solutions',
+        alt: 'Kenix Solutions - Phần Mềm AI Doanh Nghiệp',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
-    description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số.',
+    title: 'Kenix Solutions - Phần Mềm AI Giải Quyết Vấn Đề Doanh Nghiệp',
+    description: 'Phát triển phần mềm AI chuyên nghiệp, giải quyết các vấn đề doanh nghiệp bằng trí tuệ nhân tạo.',
     images: ['https://kenix-solutions.com/Kenix.png'],
   },
   robots: {

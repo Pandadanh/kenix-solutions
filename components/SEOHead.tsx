@@ -3,35 +3,55 @@ export default function SEOHead() {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "SoftwareApplication",
     "name": "Kenix Solutions",
-    "alternateName": "Landing Profile",
-    "description": "Dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số chuyên nghiệp",
+    "alternateName": "Kenix AI Solutions",
+    "description": "Phát triển phần mềm AI chuyên nghiệp, giải quyết các vấn đề doanh nghiệp bằng trí tuệ nhân tạo. Tự động hóa quy trình, tối ưu hiệu suất và tăng trưởng kinh doanh với giải pháp AI tùy chỉnh.",
     "url": baseUrl,
     "logo": `${baseUrl}/Kenix.png`,
-    "telephone": "+84374225294",
-    "email": "nguyenvantanphat.it@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bình Thạnh",
-      "addressRegion": "TP. Hồ Chí Minh",
-      "addressCountry": "VN"
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, iOS, Android",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "VND"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "150"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Kenix Solutions",
+      "logo": `${baseUrl}/Kenix.png`,
+      "telephone": "+84586997953",
+      "email": "kenis.solutions@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tân Bình",
+        "addressRegion": "TP. Hồ Chí Minh",
+        "addressCountry": "VN"
+      },
+      "sameAs": [
+        "https://www.facebook.com/tanphatdigital",
+        "https://www.instagram.com/tanphatdigital"
+      ]
     },
     "areaServed": {
       "@type": "Country",
       "name": "Vietnam"
     },
-    "serviceType": [
-      "Thiết kế Website",
-      "Phát triển Ứng dụng Di động",
-      "Chuyển đổi Số",
-      "Tư vấn Công nghệ"
+    "featureList": [
+      "Phần mềm AI tùy chỉnh",
+      "Tự động hóa quy trình doanh nghiệp",
+      "Machine Learning & Deep Learning",
+      "Business Intelligence",
+      "Xử lý dữ liệu thông minh",
+      "Chatbot & Virtual Assistant",
+      "Phân tích dự đoán",
+      "Tối ưu hóa quy trình"
     ],
-    "sameAs": [
-      "https://www.facebook.com/tanphatdigital",
-      "https://www.instagram.com/tanphatdigital"
-    ],
-    "priceRange": "$$"
   }
 
   return (

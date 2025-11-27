@@ -21,7 +21,7 @@ export default function Header() {
 
   const menuItems = [
     { label: 'Sản phẩm', href: '/vi#services' },
-    { label: 'Quan tâm', href: '/vi#about' },
+    { label: 'Blog', href: '/vi/blog' },
     { label: 'Báo giá', href: '/vi/pricing' },
     { label: 'Tuyển dụng', href: '/vi/careers' },
     { label: 'Liên hệ', href: '/vi/contact' },

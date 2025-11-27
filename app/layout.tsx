@@ -17,11 +17,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://kenix-solutions.com'),
   title: {
-    default: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
+    default: 'Kenix Solutions - Phần Mềm AI Giải Quyết Vấn Đề Doanh Nghiệp',
     template: '%s | Kenix Solutions',
   },
-  description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số. Nhanh chóng, an toàn, hiệu quả cho doanh nghiệp.',
-  keywords: ['kenix solutions', 'thiết kế website', 'phát triển ứng dụng', 'chuyển đổi số', 'công nghệ', 'giải pháp doanh nghiệp', 'landing page', 'web design', 'mobile app development'],
+  description: 'Kenix Solutions phát triển phần mềm AI chuyên nghiệp, giải quyết các vấn đề doanh nghiệp bằng trí tuệ nhân tạo. Tự động hóa quy trình, tối ưu hiệu suất và tăng trưởng kinh doanh với giải pháp AI tùy chỉnh.',
+  keywords: ['kenix solutions', 'phần mềm AI', 'giải pháp AI doanh nghiệp', 'trí tuệ nhân tạo', 'AI software', 'tự động hóa doanh nghiệp', 'machine learning', 'phần mềm tùy chỉnh', 'giải quyết vấn đề doanh nghiệp', 'AI automation', 'business intelligence', 'chuyển đổi số AI'],
   authors: [{ name: 'Kenix Solutions' }],
   creator: 'Kenix Solutions',
   publisher: 'Kenix Solutions',
@@ -35,22 +35,22 @@ export const metadata: Metadata = {
     locale: 'vi_VN',
     url: 'https://kenix-solutions.com',
     siteName: 'Kenix Solutions',
-    title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
-    description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số.',
+    title: 'Kenix Solutions - Phần Mềm AI Giải Quyết Vấn Đề Doanh Nghiệp',
+    description: 'Phát triển phần mềm AI chuyên nghiệp, giải quyết các vấn đề doanh nghiệp bằng trí tuệ nhân tạo. Tự động hóa quy trình và tối ưu hiệu suất.',
     images: [
       {
-        url: '/Kenix.png',
+        url: 'https://kenix-solutions.com/Kenix.png',
         width: 1200,
         height: 630,
-        alt: 'Kenix Solutions',
+        alt: 'Kenix Solutions - Phần Mềm AI Doanh Nghiệp',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
-    description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số.',
-    images: ['/Kenix.png'],
+    title: 'Kenix Solutions - Phần Mềm AI Giải Quyết Vấn Đề Doanh Nghiệp',
+    description: 'Phát triển phần mềm AI chuyên nghiệp, giải quyết các vấn đề doanh nghiệp bằng trí tuệ nhân tạo.',
+    images: ['https://kenix-solutions.com/Kenix.png'],
   },
   robots: {
     index: true,
@@ -71,13 +71,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/icon.png', sizes: 'any' },
-      { url: '/Kenix.png', sizes: 'any', type: 'image/png' },
+      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon.png', sizes: '16x16', type: 'image/png' },
+      { url: '/Kenix.png', sizes: '192x192', type: 'image/png' },
+      { url: '/Kenix.png', sizes: '512x512', type: 'image/png' },
     ],
     apple: [
       { url: '/Kenix.png', sizes: '180x180', type: 'image/png' },
     ],
-    shortcut: '/Kenix.png',
+    shortcut: '/icon.png',
   },
 }
 
@@ -89,9 +91,15 @@ export default function RootLayout({
   return (
     <html lang="vi" className={inter.variable}>
       <head>
-        <link rel="icon" href="/icon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/Kenix.png" />
-        <link rel="shortcut icon" href="/icon.png" type="image/png" />
+        {/* Favicon for Google Search - ưu tiên format .ico */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/icon.png" type="image/png" sizes="16x16" />
+        <link rel="apple-touch-icon" href="/Kenix.png" sizes="180x180" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="manifest" href="/manifest.json" />
+        {/* Additional icon tags for better Google indexing */}
+        <meta name="theme-color" content="#3B82F6" />
         <SEOHead />
         {/* Google Analytics */}
         <script
