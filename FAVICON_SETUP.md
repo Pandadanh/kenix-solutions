@@ -58,3 +58,4 @@ img.save('public/favicon.ico', format='ICO', sizes=[(32, 32)])
 - File size nên nhỏ (< 100KB)
 - Icon nên đơn giản, dễ nhận biết ở kích thước nhỏ
 
+

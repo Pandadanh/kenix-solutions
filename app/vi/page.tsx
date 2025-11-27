@@ -5,6 +5,7 @@ import ServicesPackages from '@/components/ServicesPackages'
 import CallToAction from '@/components/CallToAction'
 import Testimonials from '@/components/Testimonials'
 import ContactSection from '@/components/ContactSection'
+import ScrollToTop from '@/components/ScrollToTop'
 
 export const metadata: Metadata = {
   title: 'Kenix Solutions - Phần Mềm AI Giải Quyết Vấn Đề Doanh Nghiệp',
@@ -55,6 +56,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      <ScrollToTop />
       <Hero />
       <WhyChoose />
       <ServicesPackages />
