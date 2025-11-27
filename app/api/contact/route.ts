@@ -45,54 +45,62 @@ export async function POST(request: NextRequest) {
     const adminMailOptions = {
       from: process.env.EMAIL_USERNAME,
       to: process.env.CONTACT_EMAIL || process.env.EMAIL_USERNAME,
-      subject: `🔔 Liên hệ mới từ ${name} - Kenix Solutions`,
+      subject: `Yêu cầu liên hệ mới từ ${name} - Kenix Solutions`,
       html: `
         <!DOCTYPE html>
         <html>
         <head>
           <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-            .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
-            .content { background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; }
-            .info-row { background: white; margin: 10px 0; padding: 15px; border-radius: 5px; border-left: 4px solid #667eea; }
-            .label { font-weight: bold; color: #667eea; margin-bottom: 5px; }
-            .value { color: #333; }
-            .footer { text-align: center; margin-top: 20px; color: #888; font-size: 12px; }
+            body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #1a1a1a; margin: 0; padding: 0; background-color: #f5f5f5; }
+            .container { max-width: 600px; margin: 40px auto; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+            .header { background: #2c3e50; color: white; padding: 32px 40px; border-bottom: 3px solid #FF6B35; }
+            .header h1 { margin: 0 0 8px 0; font-size: 22px; font-weight: 600; letter-spacing: -0.3px; }
+            .header p { margin: 0; font-size: 14px; opacity: 0.9; font-weight: 400; }
+            .content { padding: 40px; }
+            .info-section { margin-bottom: 24px; }
+            .info-row { padding: 16px 0; border-bottom: 1px solid #e5e5e5; }
+            .info-row:last-child { border-bottom: none; }
+            .label { font-size: 11px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; display: block; }
+            .value { font-size: 15px; color: #1a1a1a; font-weight: 400; line-height: 1.6; }
+            .message-content { background: #f8f8f8; padding: 20px; border-radius: 4px; margin-top: 8px; border-left: 3px solid #FF6B35; }
+            .footer { background: #f8f8f8; padding: 24px 40px; text-align: center; border-top: 1px solid #e5e5e5; }
+            .footer p { margin: 0; font-size: 12px; color: #666; line-height: 1.6; }
           </style>
         </head>
         <body>
           <div class="container">
             <div class="header">
-              <h1>📧 Liên Hệ Mới</h1>
-              <p>Kenix Solutions - Landing Profile</p>
+              <h1>Yêu cầu liên hệ mới</h1>
+              <p>Kenix Solutions</p>
             </div>
             <div class="content">
-              <div class="info-row">
-                <div class="label">👤 Họ và Tên:</div>
-                <div class="value">${name}</div>
-              </div>
-              <div class="info-row">
-                <div class="label">📧 Email:</div>
-                <div class="value">${email}</div>
-              </div>
-              <div class="info-row">
-                <div class="label">📱 Số điện thoại:</div>
-                <div class="value">${phone}</div>
-              </div>
-              ${message ? `
-              <div class="info-row">
-                <div class="label">💬 Nội dung:</div>
-                <div class="value">${message.replace(/\n/g, '<br>')}</div>
-              </div>
-              ` : ''}
-              <div class="info-row">
-                <div class="label">🕐 Thời gian:</div>
-                <div class="value">${new Date().toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' })}</div>
+              <div class="info-section">
+                <div class="info-row">
+                  <span class="label">Họ và tên</span>
+                  <div class="value">${name}</div>
+                </div>
+                <div class="info-row">
+                  <span class="label">Địa chỉ email</span>
+                  <div class="value">${email}</div>
+                </div>
+                <div class="info-row">
+                  <span class="label">Số điện thoại</span>
+                  <div class="value">${phone}</div>
+                </div>
+                ${message ? `
+                <div class="info-row">
+                  <span class="label">Nội dung tin nhắn</span>
+                  <div class="message-content">${message.replace(/\n/g, '<br>')}</div>
+                </div>
+                ` : ''}
+                <div class="info-row">
+                  <span class="label">Thời gian gửi</span>
+                  <div class="value">${new Date().toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' })}</div>
+                </div>
               </div>
             </div>
             <div class="footer">
-              <p>Email này được gửi tự động từ form liên hệ trên website Kenix Solutions</p>
+              <p>Email tự động từ hệ thống Kenix Solutions<br>Vui lòng không trả lời trực tiếp email này</p>
             </div>
           </div>
         </body>
@@ -105,222 +113,197 @@ export async function POST(request: NextRequest) {
     const customerMailOptions = {
       from: process.env.EMAIL_USERNAME,
       to: email,
-      subject: `✅ Cảm ơn bạn đã liên hệ với Kenix Solutions`,
+      subject: `Xác nhận đã nhận yêu cầu liên hệ - Kenix Solutions`,
       html: `
         <!DOCTYPE html>
         <html>
         <head>
           <style>
             body { 
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; 
               line-height: 1.6; 
-              color: #333; 
+              color: #1a1a1a; 
               margin: 0;
               padding: 0;
-              background-color: #f4f4f4;
+              background-color: #f5f5f5;
             }
             .container { 
               max-width: 600px; 
-              margin: 20px auto; 
+              margin: 40px auto; 
               background: white;
-              border-radius: 15px;
-              overflow: hidden;
-              box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+              box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             }
             .header { 
               background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); 
               color: white; 
-              padding: 40px 30px; 
+              padding: 40px; 
               text-align: center; 
             }
             .header h1 {
-              margin: 0;
-              font-size: 28px;
-              font-weight: 700;
+              margin: 0 0 8px 0;
+              font-size: 24px;
+              font-weight: 600;
+              letter-spacing: -0.5px;
             }
             .header p {
-              margin: 10px 0 0 0;
-              font-size: 16px;
+              margin: 0;
+              font-size: 14px;
               opacity: 0.95;
-            }
-            .logo {
-              width: 60px;
-              height: 60px;
-              background: white;
-              border-radius: 50%;
-              margin: 0 auto 20px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 30px;
+              font-weight: 400;
             }
             .content { 
-              padding: 40px 30px;
-              background: white;
+              padding: 40px;
             }
             .greeting {
-              font-size: 20px;
+              font-size: 18px;
               font-weight: 600;
-              color: #333;
-              margin-bottom: 20px;
+              color: #1a1a1a;
+              margin-bottom: 24px;
             }
             .message-box {
-              background: #f8f9fa;
-              border-left: 4px solid #FF6B35;
-              padding: 20px;
-              margin: 25px 0;
-              border-radius: 5px;
+              background: #f8f8f8;
+              border-left: 3px solid #FF6B35;
+              padding: 24px;
+              margin: 24px 0;
+              line-height: 1.7;
             }
             .message-box p {
               margin: 0;
-              line-height: 1.8;
-              color: #555;
+              color: #333;
             }
-            .info-section {
-              margin: 30px 0;
-              padding: 20px;
-              background: #fff5f2;
-              border-radius: 10px;
+            .info-box {
+              background: #f8f8f8;
+              padding: 24px;
+              margin: 24px 0;
+              border-radius: 4px;
             }
-            .info-section h3 {
-              color: #FF6B35;
-              font-size: 18px;
-              margin-bottom: 15px;
-              display: flex;
-              align-items: center;
-              gap: 10px;
+            .info-box h3 {
+              margin: 0 0 16px 0;
+              font-size: 14px;
+              font-weight: 600;
+              color: #666;
+              text-transform: uppercase;
+              letter-spacing: 0.8px;
             }
             .info-item {
+              padding: 12px 0;
+              border-bottom: 1px solid #e5e5e5;
               display: flex;
-              align-items: center;
-              gap: 10px;
-              margin: 10px 0;
-              color: #555;
+              justify-content: space-between;
             }
-            .info-item strong {
-              color: #333;
-              min-width: 120px;
+            .info-item:last-child {
+              border-bottom: none;
             }
-            .cta-button {
-              display: inline-block;
-              background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
-              color: white;
-              padding: 15px 40px;
-              text-decoration: none;
-              border-radius: 30px;
+            .info-label {
+              font-weight: 500;
+              color: #666;
+              font-size: 14px;
+            }
+            .info-value {
+              color: #1a1a1a;
+              font-weight: 400;
+              font-size: 14px;
+            }
+            .contact-section {
+              background: #f8f8f8;
+              padding: 24px;
+              margin: 24px 0;
+              text-align: center;
+              border-radius: 4px;
+            }
+            .contact-section h4 {
+              margin: 0 0 16px 0;
+              font-size: 14px;
               font-weight: 600;
-              margin: 20px 0;
-              text-align: center;
-              transition: transform 0.3s ease;
+              color: #1a1a1a;
             }
-            .cta-button:hover {
-              transform: translateY(-2px);
-            }
-            .social-links {
-              text-align: center;
-              margin: 30px 0;
-              padding: 20px;
-              background: #f8f9fa;
-              border-radius: 10px;
-            }
-            .social-links h4 {
-              margin-bottom: 15px;
+            .contact-section p {
+              margin: 8px 0;
+              font-size: 14px;
               color: #333;
             }
-            .social-links a {
-              display: inline-block;
-              margin: 0 10px;
+            .contact-section a {
               color: #FF6B35;
               text-decoration: none;
               font-weight: 500;
             }
+            .divider {
+              height: 1px;
+              background: #e5e5e5;
+              margin: 32px 0;
+            }
             .footer { 
               text-align: center; 
-              padding: 30px;
+              padding: 32px;
               background: #2c3e50;
               color: #ecf0f1;
             }
             .footer p {
-              margin: 5px 0;
+              margin: 6px 0;
+              font-size: 13px;
+              line-height: 1.6;
+            }
+            .footer-company {
+              font-weight: 600;
               font-size: 14px;
-            }
-            .footer a {
-              color: #FF6B35;
-              text-decoration: none;
-            }
-            .divider {
-              height: 2px;
-              background: linear-gradient(to right, transparent, #FF6B35, transparent);
-              margin: 30px 0;
             }
           </style>
         </head>
         <body>
           <div class="container">
             <div class="header">
-              <div class="logo">🚀</div>
               <h1>Kenix Solutions</h1>
-              <p>Digital Innovation & Web Development</p>
+              <p>Giải pháp công nghệ chuyên nghiệp</p>
             </div>
             
             <div class="content">
-              <div class="greeting">Xin chào ${name}! 👋</div>
+              <div class="greeting">Kính chào ${name},</div>
               
               <div class="message-box">
                 <p>
-                  <strong>Cảm ơn bạn đã liên hệ với Kenix Solutions!</strong><br><br>
-                  Chúng tôi đã nhận được thông tin của bạn và sẽ phản hồi trong thời gian sớm nhất. 
-                  Đội ngũ chuyên gia của chúng tôi đang xem xét yêu cầu và sẽ liên hệ lại với bạn 
-                  trong vòng <strong>24 giờ</strong>.
+                  Cảm ơn bạn đã liên hệ với Kenix Solutions. Chúng tôi đã nhận được yêu cầu của bạn 
+                  và sẽ phản hồi trong thời gian sớm nhất. Đội ngũ tư vấn sẽ liên hệ lại với bạn 
+                  trong vòng <strong>24 giờ làm việc</strong>.
                 </p>
               </div>
 
-              <div class="info-section">
-                <h3>📋 Thông tin bạn đã gửi:</h3>
+              <div class="info-box">
+                <h3>Thông tin đã nhận</h3>
                 <div class="info-item">
-                  <strong>👤 Họ và tên:</strong> ${name}
+                  <span class="info-label">Họ và tên: </span>
+                  <span class="info-value">${name}</span>
                 </div>
                 <div class="info-item">
-                  <strong>📧 Email:</strong> ${email}
+                  <span class="info-label">Email</span>
+                  <span class="info-value">${email}</span>
                 </div>
                 <div class="info-item">
-                  <strong>📱 Điện thoại:</strong> ${phone}
+                  <span class="info-label">Số điện thoại: </span>
+                  <span class="info-value">${phone}</span>
                 </div>
                 ${message ? `
-                <div class="info-item" style="display: block; margin-top: 15px;">
-                  <strong>💬 Nội dung:</strong><br>
-                  <span style="margin-left: 0; display: block; margin-top: 5px;">${message.replace(/\n/g, '<br>')}</span>
+                <div class="info-item" style="display: block; padding-top: 16px;">
+                  <span class="info-label" style="display: block; margin-bottom: 8px;">Nội dung</span>
+                  <span class="info-value" style="display: block; line-height: 1.6;">${message.replace(/\n/g, '<br>')}</span>
                 </div>
                 ` : ''}
               </div>
 
               <div class="divider"></div>
 
-              <div style="text-align: center;">
-                <p style="margin-bottom: 20px;">Trong lúc chờ đợi, bạn có thể tìm hiểu thêm về dịch vụ của chúng tôi:</p>
-                <a href="https://kenixsolutions.com" class="cta-button">
-                  🌐 Khám phá dịch vụ
-                </a>
-              </div>
-
-              <div class="social-links">
-                <h4>📞 Liên hệ trực tiếp:</h4>
-                <p>
-                  <strong>Hotline:</strong> <a href="tel:+84586997953">+84 586 997 953</a><br>
-                  <strong>Email:</strong> <a href="mailto:kenis.solutions@gmail.com">kenis.solutions@gmail.com</a><br>
-                  <strong>Địa chỉ:</strong> Tân Bình, TP. Hồ Chí Minh
-                </p>
+              <div class="contact-section">
+                <h4>Thông tin liên hệ</h4>
+                <p><strong>Hotline:</strong> <a href="tel:+84586997953">+84 586 997 953</a></p>
+                <p><strong>Email:</strong> <a href="mailto:kenix.solutions@gmail.com">kenix.solutions@gmail.com</a></p>
+                <p><strong>Địa chỉ:</strong> Tân Bình, TP. Hồ Chí Minh</p>
               </div>
             </div>
 
             <div class="footer">
-              <p><strong>Kenix Solutions</strong></p>
+              <p class="footer-company">Kenix Solutions</p>
               <p>Chuyên gia giải pháp số - Đồng hành cùng doanh nghiệp</p>
-              <p style="margin-top: 15px; opacity: 0.8;">
+              <p style="margin-top: 16px; opacity: 0.8;">
                 © ${new Date().getFullYear()} Kenix Solutions. All rights reserved.
-              </p>
-              <p style="font-size: 12px; opacity: 0.7; margin-top: 10px;">
-                Email này được gửi tự động. Vui lòng không reply trực tiếp.
               </p>
             </div>
           </div>

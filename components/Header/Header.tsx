@@ -21,10 +21,10 @@ export default function Header() {
 
   const menuItems = [
     { label: 'Sản phẩm', href: '/vi#services' },
-    { label: 'Hồ sơ', href: '/vi#about' },
-    { label: 'Đội ngũ', href: '/vi#projects' },
-    { label: 'Chuyên môn', href: '/vi/solutions' },
-    { label: 'Bài viết', href: '/vi/blog' },
+    { label: 'Quan tâm', href: '/vi#about' },
+    { label: 'Báo giá', href: '/vi/pricing' },
+    { label: 'Tuyển dụng', href: '/vi/careers' },
+    { label: 'Liên hệ', href: '/vi/contact' },
   ]
 
   return (

@@ -81,8 +81,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h3 className={styles.contactLabel}>Email</h3>
-                  <a href="mailto:kenis.solutions@gmail.com" className={styles.contactValue}>
-                    kenis.solutions@gmail.com
+                  <a href="mailto:kenix.solutions@gmail.com" className={styles.contactValue}>
+                    kenix.solutions@gmail.com
                   </a>
                 </div>
               </div>
