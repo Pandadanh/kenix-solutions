@@ -6,6 +6,7 @@ import CRMBenefitsMobile from '@/components/CRMBenefits/CRMBenefitsMobile'
 import SEOProfileMobile from '@/components/SEOProfile/SEOProfileMobile'
 import WhyChoose from '@/components/WhyChoose'
 import ServicesPackages from '@/components/ServicesPackages'
+import ServicesPackagesMobile from '@/components/ServicesPackages/ServicesPackagesMobile'
 import CallToAction from '@/components/CallToAction'
 import Testimonials from '@/components/Testimonials'
 import ContactSection from '@/components/ContactSection'
@@ -68,6 +69,7 @@ export default function HomePage() {
       <SEOProfileMobile />
       <WhyChoose />
       <ServicesPackages />
+      <ServicesPackagesMobile />
       <ContactSection />
     </>
   )
