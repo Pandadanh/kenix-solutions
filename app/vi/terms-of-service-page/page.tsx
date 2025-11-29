@@ -26,10 +26,10 @@ export default function TermsPage() {
           <div className={styles.section}>
             <h2>2. Định Nghĩa</h2>
             <ul>
-              <li><strong>"Chúng tôi", "Kenix Solutions":</strong> Là công ty cung cấp dịch vụ thiết kế website, SEO, Digital Marketing và các dịch vụ công nghệ liên quan</li>
-              <li><strong>"Khách hàng", "Bạn":</strong> Là cá nhân hoặc tổ chức sử dụng dịch vụ của Kenix Solutions</li>
-              <li><strong>"Dịch vụ":</strong> Bao gồm thiết kế website, SEO, Google Ads, bảo trì website, UI/UX design và các dịch vụ liên quan</li>
-              <li><strong>"Sản phẩm":</strong> Là website, ứng dụng hoặc các sản phẩm công nghệ được phát triển bởi Kenix Solutions</li>
+              <li><strong>&ldquo;Chúng tôi&rdquo;, &ldquo;Kenix Solutions&rdquo;:</strong> Là công ty cung cấp dịch vụ thiết kế website, SEO, Digital Marketing và các dịch vụ công nghệ liên quan</li>
+              <li><strong>&ldquo;Khách hàng&rdquo;, &ldquo;Bạn&rdquo;:</strong> Là cá nhân hoặc tổ chức sử dụng dịch vụ của Kenix Solutions</li>
+              <li><strong>&ldquo;Dịch vụ&rdquo;:</strong> Bao gồm thiết kế website, SEO, Google Ads, bảo trì website, UI/UX design và các dịch vụ liên quan</li>
+              <li><strong>&ldquo;Sản phẩm&rdquo;:</strong> Là website, ứng dụng hoặc các sản phẩm công nghệ được phát triển bởi Kenix Solutions</li>
             </ul>
           </div>
 
