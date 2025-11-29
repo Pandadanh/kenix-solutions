@@ -1,0 +1,245 @@
+.horizontalSection {
+  position: relative;
+  padding: 0;
+  background: linear-gradient(180deg, #ffffff 0%, #fdfcf8 100%);
+  overflow: hidden;
+}
+
+.scrollWrapper {
+  position: relative;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.scrollContainer {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: 0;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollSection {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  height: 100vh;
+  max-height: 900px;
+  overflow: hidden;
+}
+
+/* Navigation Buttons */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  width: 56px;
+  height: 56px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  color: #1a1a1a;
+}
+
+.navButton:hover:not(.disabled) {
+  background: #007aff;
+  color: white;
+  box-shadow: 0 12px 32px rgba(0, 122, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.navButton.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.navLeft {
+  left: 24px;
+}
+
+.navRight {
+  right: 24px;
+}
+
+/* Indicators */
+.indicators {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 24px;
+  z-index: 100;
+  background: white;
+  padding: 16px 32px;
+  border-radius: 48px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.indicator:hover {
+  background: #f8f9fa;
+}
+
+.indicator.active {
+  background: linear-gradient(135deg, #007aff 0%, #00d4ff 100%);
+}
+
+.indicator.active .indicatorDot {
+  background: white;
+}
+
+.indicator.active .indicatorLabel {
+  color: white;
+}
+
+.indicatorDot {
+  width: 8px;
+  height: 8px;
+  background: #6c757d;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.indicatorLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .navButton {
+    width: 48px;
+    height: 48px;
+  }
+
+  .navLeft {
+    left: 16px;
+  }
+
+  .navRight {
+    right: 16px;
+  }
+
+  .indicators {
+    padding: 12px 24px;
+    gap: 16px;
+  }
+
+  .indicator {
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .horizontalSection {
+    padding: 40px 0 60px;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1rem;
+  }
+
+  .navButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navButton svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .navLeft {
+    left: 8px;
+  }
+
+  .navRight {
+    right: 8px;
+  }
+
+  .indicators {
+    padding: 10px 16px;
+    gap: 12px;
+    bottom: 20px;
+  }
+
+  .indicator {
+    padding: 6px 10px;
+  }
+
+  .indicatorLabel {
+    font-size: 0.75rem;
+  }
+
+  .indicatorDot {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .indicators {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .indicator {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navButton {
+    display: none;
+  }
+}
+
+/* Keyboard Navigation Support */
+.scrollContainer:focus {
+  outline: none;
+}
+
+/* Smooth scrolling animation */
+@media (prefers-reduced-motion: reduce) {
+  .scrollContainer {
+    scroll-behavior: auto;
+  }
+  
+  .navButton {
+    transition: none;
+  }
+}

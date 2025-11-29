@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
+import HorizontalScroll from '@/components/HorizontalScroll'
 import WhyChoose from '@/components/WhyChoose'
 import ServicesPackages from '@/components/ServicesPackages'
 import CallToAction from '@/components/CallToAction'
@@ -58,6 +59,7 @@ export default function HomePage() {
     <>
       <ScrollToTop />
       <Hero />
+      <HorizontalScroll />
       <WhyChoose />
       <ServicesPackages />
       <ContactSection />
