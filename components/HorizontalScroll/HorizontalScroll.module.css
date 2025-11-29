@@ -3,6 +3,14 @@
   padding: 0;
   background: linear-gradient(180deg, #ffffff 0%, #fdfcf8 100%);
   overflow: hidden;
+  display: block;
+}
+
+/* Hide on mobile, show on desktop */
+@media (max-width: 1023px) {
+  .horizontalSection {
+    display: none;
+  }
 }
 
 .scrollWrapper {

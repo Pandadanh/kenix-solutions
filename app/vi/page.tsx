@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
 import HorizontalScroll from '@/components/HorizontalScroll'
+import ZaloSection from '@/components/ZaloSection'
+import CRMBenefitsMobile from '@/components/CRMBenefits/CRMBenefitsMobile'
+import SEOProfileMobile from '@/components/SEOProfile/SEOProfileMobile'
 import WhyChoose from '@/components/WhyChoose'
 import ServicesPackages from '@/components/ServicesPackages'
 import CallToAction from '@/components/CallToAction'
@@ -60,6 +63,9 @@ export default function HomePage() {
       <ScrollToTop />
       <Hero />
       <HorizontalScroll />
+      <ZaloSection />
+      <CRMBenefitsMobile />
+      <SEOProfileMobile />
       <WhyChoose />
       <ServicesPackages />
       <ContactSection />

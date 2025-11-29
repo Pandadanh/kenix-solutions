@@ -8,6 +8,13 @@
   align-items: center;
 }
 
+/* Hide on mobile, show on desktop */
+@media (max-width: 1023px) {
+  .crmSection {
+    display: none;
+  }
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
