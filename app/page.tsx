@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Kenix Solutions - Giải Pháp Công Nghệ Chuyên Nghiệp',
   description: 'Kenix Solutions cung cấp dịch vụ thiết kế website, phát triển ứng dụng di động và giải pháp chuyển đổi số. Nhanh chóng, an toàn, hiệu quả cho doanh nghiệp.',
-  keywords: 'kenix solutions, thiết kế website, phát triển ứng dụng, chuyển đổi số, công nghệ, giải pháp doanh nghiệp',
+  keywords: 'kenix-solution, kenix solution, kenix solutions, kenix-solutions, thiết kế website, phát triển ứng dụng, chuyển đổi số, công nghệ, giải pháp doanh nghiệp, phần mềm AI',
   alternates: {
     canonical: 'https://kenix-solutions.com',
   },

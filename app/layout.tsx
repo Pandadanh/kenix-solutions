@@ -21,14 +21,19 @@ export const metadata: Metadata = {
     template: '%s | Kenix Solutions',
   },
   description: 'Kenix Solutions phát triển phần mềm AI chuyên nghiệp, giải quyết các vấn đề doanh nghiệp bằng trí tuệ nhân tạo. Tự động hóa quy trình, tối ưu hiệu suất và tăng trưởng kinh doanh với giải pháp AI tùy chỉnh.',
-  keywords: ['kenix solutions', 'phần mềm AI', 'giải pháp AI doanh nghiệp', 'trí tuệ nhân tạo', 'AI software', 'tự động hóa doanh nghiệp', 'machine learning', 'phần mềm tùy chỉnh', 'giải quyết vấn đề doanh nghiệp', 'AI automation', 'business intelligence', 'chuyển đổi số AI'],
-  authors: [{ name: 'Kenix Solutions' }],
+  keywords: ['kenix-solution', 'kenix solution', 'kenix solutions', 'kenix-solutions', 'phần mềm AI', 'giải pháp AI doanh nghiệp', 'trí tuệ nhân tạo', 'AI software', 'tự động hóa doanh nghiệp', 'machine learning', 'phần mềm tùy chỉnh', 'giải quyết vấn đề doanh nghiệp', 'AI automation', 'business intelligence', 'chuyển đổi số AI', 'thiết kế website', 'phát triển ứng dụng'],
+  authors: [{ name: 'Kenix Solutions', url: 'https://kenix-solutions.com' }],
   creator: 'Kenix Solutions',
   publisher: 'Kenix Solutions',
+  applicationName: 'Kenix Solutions',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
+  },
+  other: {
+    'brand': 'Kenix Solutions',
+    'company': 'Kenix Solutions',
   },
   openGraph: {
     type: 'website',
