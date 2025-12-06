@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/vi`,
       lastModified: now,
       changeFrequency: 'weekly',
-      priority: 1.0,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/vi/contact`,
